@@ -3,8 +3,8 @@ package tests.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
 
@@ -13,7 +13,7 @@ public class BaseSetup {
     public HomePage homePage;
 
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -21,7 +21,7 @@ public class BaseSetup {
         homePage = new HomePage(driver);
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
