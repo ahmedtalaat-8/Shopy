@@ -1,10 +1,11 @@
-package tests;
+package tests.bracelets;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.BraceletsCatalogPage;
 import pages.ViewCartPage;
+import tests.base.BaseSetup;
 
 
 public class BraceletsCatalogTest extends BaseSetup {
